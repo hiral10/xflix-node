@@ -1,9 +1,10 @@
 const mongoose = require("mongoose");
 const app = require("./app");
-mongoose.connect('mongodb://127.0.0.1:27017/xflix',{ useNewUrlParser: true,useUnifiedTopology: true })
+require('dotenv').config({path:"../.env"})
+mongoose.connect(process.env.MONGODB_URL,{ useNewUrlParser: true,useUnifiedTopology: true  })
         .then(()=>console.log("connect to DB"))
         .catch((e)=>console.log("failed to connect to DB",e))
         
-app.listen(8082,()=>{
+app.listen(process.env.NODE_ENV,()=>{
     console.log("Listening to port",8082)
 })
