@@ -7,4 +7,4 @@ mongoose.connect(process.env.MONGODB_URL,{ useNewUrlParser: true,useUnifiedTopol
         
 app.listen(process.env.NODE_ENV,()=>{
     console.log("Listening to port",process.env.NODE_ENV)
-})
+});
