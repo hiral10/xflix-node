@@ -5,6 +5,6 @@ mongoose.connect(process.env.MONGODB_URL,{ useNewUrlParser: true,useUnifiedTopol
         .then(()=>console.log("connect to DB",process.env.MONGODB_URL))
         .catch((e)=>console.log("failed to connect to DB",e))
         
-app.listen(process.env.NODE_ENV,()=>{
-    console.log("Listening to port",process.env.NODE_ENV)
+app.listen(process.env.PORT,()=>{
+    console.log("Listening to port",process.env.PORT)
 });
